@@ -47,42 +47,43 @@ body, html {
     
 }
 
-.input{
-    display:flex;
-    justify-content: space-evenly;
-    gap:10px;
-     display: flex;
+.input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   gap: 10px;
-  margin-bottom: 20px;
-  flex-wrap: wrap;
-    
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto 20px;
 }
 
-.entertext{
-    padding: 15px;
-    border-radius: 20px;
-    flex:1;
-    border: none;
-    outline: none;
-    font-size: 16px;
-    font-weight: 600;
-    color: #ff6347;
-     border-radius: 20px;
+.entertext {
+  flex: 1;
+  min-width: 0;
+  padding: 12px 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 20px;
+  color: #ff6347;
+  font-weight: 600;
+  outline: none;
 }
 
-.btn{
-    height:50px;
-    width:50px;
-    padding: 15px;
-    border: none;
-    border-radius: 30px;
-    font-size: large;
-     background-color: #FF7f50;
-     cursor: pointer;
-     transition: transform 0.5s ease, background-color 0.3s ease;
-     font-size: 0.875rem;
- 
+.btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #FF7f50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 
 .btn:hover{
     background-color: #ff6347;
@@ -97,6 +98,23 @@ body, html {
     font-size: 1.2rem;
     color:white;
 }
+
+
+@media (max-width: 480px) {
+  .input {
+    flex-direction: row; /* ensures same line on mobile */
+    flex-wrap: nowrap;
+  }
+
+  .entertext {
+    flex: 1;
+  }
+
+  .btn {
+    flex-shrink: 0;
+  }
+}
+
 
 .item{
     display: flex;
